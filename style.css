@@ -1,0 +1,35 @@
+ 
+* {
+    box-sizing: border-box;
+}
+.checkbox{
+    position: absolute;
+}
+
+/* .checkbox-container label:hover {
+    border-color: var(--brand-color);
+} */
+
+.checkbox-container label{
+    display: inline-block;
+     width: 30px;
+     height: 30px;
+    border-radius:4px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  position: relative;
+  border: 1px solid #C2C2C2;
+}
+ 
+.checkbox:checked + label{
+    border-color: rebeccapurple;
+    background-color: rebeccapurple;
+}
+
+.checkbox:focus+label, label:active{
+    background-color: rebeccapurple;
+    outline: 2px solid #CFBFFF;
+}

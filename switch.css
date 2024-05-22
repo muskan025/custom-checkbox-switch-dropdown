@@ -1,0 +1,57 @@
+ 
+* {
+    box-sizing: border-box;
+}
+.switch{
+    position: absolute;
+     width: 30px;
+     height: 15px;
+     opacity: 0;
+}
+
+ 
+
+.switch-container label{
+    display: inline-block;
+     width: 80px;
+     /* height: 30px; sometimes let the child (switch circle) decide parent's height, now you don't need to spent time fixing the height of the child*/ 
+    height:40px;
+     border-radius:40px;
+    background-color: #E0E0E0;
+    cursor: pointer;
+    justify-content: start;
+  position: relative;
+  border: 4px solid #807e7e80;
+  padding: 1.5px;
+}
+ 
+.switch-container label:hover{
+    border-color: rebeccapurple;
+}
+
+.switch-circle{
+height: 30px;
+width: 30px;
+border-radius: 100%;
+background-color: white;
+position: absolute;
+ transition: all 0.25s ease-in-out;
+ left:2px;
+ box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+}
+
+.switch:checked +label .switch-circle{
+ left:100%;
+ transform: translate(-100%);
+  }
+
+.switch:checked + label{
+    border-color: rebeccapurple;
+    background-color: rebeccapurple;
+
+}
+
+.switch:focus+label, label:active{
+    background-color: rebeccapurple;
+    outline: 2px solid #CFBFFF;
+}

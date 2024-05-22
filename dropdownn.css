@@ -1,0 +1,76 @@
+ 
+body{
+    font-family: "DM Sans", sans-serif;
+}
+
+.dropdown{
+    max-width: 300px;
+    margin: 20px;
+}
+
+
+.dropdown-header{
+    background-color: rebeccapurple;
+     height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:8px 16px;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+}
+
+.dropdown-header input{
+    position: absolute;
+    opacity: 0;
+}
+
+.dropdown-header .icon-text span{
+    color: white;
+}
+
+.dropdown-header .icon-text {
+ display: flex;
+  gap:8px;
+}
+
+.dropdown-header .caret{
+    transition: transform 0.25s ease-in-out;
+ }
+
+ .dropdown-header input:checked + img{
+    transform: rotate(180deg);
+ }
+
+.dropdown-menu{
+    box-shadow: 0px 8px 16px 0px #00000014;
+    margin: 0 ;
+    padding: 0;
+    max-height: 0; /* transition can't be applied on display property that's why max-height */
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+    border-radius: 0 0 4px 4px;
+ }
+
+.dropdown-menu li{
+    list-style: none;
+    color: #424242;
+    padding: 8px 40px;
+    cursor: pointer;
+ }
+
+.menu-container:hover{
+    background:  #e5e5e5;
+ }
+
+.dropdown-container:has(input:checked) .dropdown-menu{
+    max-height: 400px;
+}
+
+.dropdown-container:has(input:checked) .dropdown-menu li{
+    border-radius: 4px 4px 0 0;
+}
+
+
+
+ 
